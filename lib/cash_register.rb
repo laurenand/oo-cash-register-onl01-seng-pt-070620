@@ -8,6 +8,6 @@ class CashRegister
      self.total = 20
   end
   def add_item(title, price)
-    binding.pry 
+    
   end
 end
