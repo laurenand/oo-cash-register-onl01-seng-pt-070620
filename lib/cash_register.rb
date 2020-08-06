@@ -1,3 +1,4 @@
+require 'pry'
 class CashRegister
   attr_accessor :total
   def initialize(total = 0)
@@ -7,6 +8,6 @@ class CashRegister
      self.total = 20
   end
   def add_item(title, price)
-    self.total 
+    binding.pry 
   end
 end
