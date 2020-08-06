@@ -12,19 +12,19 @@ class CashRegister
   def add_item(title, price, qty = 1)
     self.last_transaction = price * qty
     self.total += price * qty
-    var = 0
-    until var == qty
+    i = 0
+    until i == qty
     items << title
-    var += 1 
+    i += 1 
     end
   end
   
   def apply_discount
-    
+    if discount > 0 
+      self.total = (self.total - self.total * (discount.to_f/100)).to_i 
+      "After the discount, the total comes to $#{self.total}"
   end
-  def items
-    
-  end
+  
   def void_last_transaction
     self.total -= self.last_transaction
   end
